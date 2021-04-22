@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% for metaName, metaContent in site.meta -%}
+    <meta name="{{ metaName }}" content="{{ metaContent }}">
+  {%- endfor %}
+  {% block meta %}{% endblock %}
+
+  <title>{% block title -%}
+    {{ item.title | default(title) }} - {{ site.meta.title }}
+  {%- endblock %}</title>
+
+  {% block head %}
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/assets/{{ assets('main.css') }}">
+  {% endblock %}
+</head>
+<body>
+  
+  {% block content %}{% endblock %}
+
+  {% include "partials/tailwind-size-debug.njk" %}    
+  {% block bodyEnd -%}
+    <script src="/assets/{{ assets('main.js') }}" defer></script>
+  {%- endblock %}
+</body>
+</html>

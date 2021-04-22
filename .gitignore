@@ -1,0 +1,8 @@
+.DS_Store
+
+node_modules
+
+site/assets/dist
+site/assets/dev
+data/assets.js
+__build__

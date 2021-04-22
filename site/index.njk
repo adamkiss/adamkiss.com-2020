@@ -1,0 +1,19 @@
+---
+title: Welcome
+repository: adamkiss/adamkiss.com
+---
+
+{% extends "layout.njk" %}
+
+{% block content %}
+  <div class="
+    absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2
+    p-4 flex flex-col items-center justify-center w-2/3 h-2/3 bg-black
+  ">
+    <div class="text-white text-center leading-loose">
+      <h1 class="font-bold text-2xl">{{ site.meta.title }} - {{ title }}</h1>
+      <p class="text-lg">{{ site.meta.description }}</p>
+      <p class="text-lg">You can find this site at <a class="underline" href="https://github.com/{{ repository }}/">{{ repository }}</a></p>
+    </div>
+  </div>
+{% endblock %}
