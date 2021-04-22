@@ -2,39 +2,39 @@
     "name": "adamkiss.com",
     "version": "1.0.0",
     "description": "My website.",
-    "main": "eleventy\/index.js",
+    "main": "eleventy/index.js",
     "config": {
         "host": 3000,
         "port": 3000,
         "dir": "__build__"
     },
     "scripts": {
-        "clean:assets": "rm -rf site\/assets\/*",
+        "clean:assets": "rm -rf site/assets/*",
         "clean:dist": "rm -fr ${npm_package_config_dir}",
         "-- manifest": "                                              ",
         "manifest:dev": "NODE_ENV=development hash-and-manifest empty",
         "manifest:prod": "NODE_ENV=production hash-and-manifest",
         "-- watch": "                                              ",
-        "watch:11": "eleventy --config=eleventy\/index.js --quiet --watch --serve --port=${npm_package_config_port}",
-        "watch:css": "postcss assets\/*.css --dir site\/assets\/dev -w",
-        "watch:js": "esbuild --bundle --watch --sourcemap assets\/*.js --outdir=site\/assets\/dev",
+        "watch:11": "eleventy --config=eleventy/index.js --quiet --watch --serve --port=${npm_package_config_port}",
+        "watch:css": "postcss assets/*.css --dir site/assets/dev -w",
+        "watch:js": "esbuild --bundle --watch --sourcemap assets/*.js --outdir=site/assets/dev",
         "watch": "NODE_ENV=development run-p watch:*",
         "-- build": "                                              ",
-        "build:11": "NODE_ENV=production eleventy --config=eleventy\/index.js",
-        "build:css": "postcss assets\/*.css -d site\/assets\/dist",
-        "build:js": "esbuild --bundle --target=es5 --minify assets\/*.js --outdir=site\/assets\/dist",
+        "build:11": "NODE_ENV=production eleventy --config=eleventy/index.js",
+        "build:css": "postcss assets/*.css -d site/assets/dist",
+        "build:js": "esbuild --bundle --target=es5 --minify assets/*.js --outdir=site/assets/dist",
         "build:assets": "NODE_ENV=production run-p build:css build:js",
         "--": "                                              ",
         "start": "run-s manifest:dev clean:assets watch",
         "prod": "run-s clean:* && run-s build:assets manifest:prod build:11",
         "-- ": "                                              ",
-        "open": "open http:\/\/localhost:${npm_package_config_port}\/"
+        "open": "open http://localhost:${npm_package_config_port}/"
     },
-    "author": "Adam Kiss (https:\/\/adamkiss.com)",
+    "author": "Adam Kiss (https://adamkiss.com)",
     "license": "unlicensed",
     "private": true,
     "devDependencies": {
-        "@11ty\/eleventy": "^0.12.1",
+        "@11ty/eleventy": "^0.12.1",
         "autoprefixer": "^10.2.5",
         "cssnano": "^5.0.1",
         "diacritics": "^1.3.0",
@@ -50,5 +50,5 @@
         "postcss-nested": "^5.0.5",
         "tailwindcss": "^2.1.1"
     },
-    "homepage": "https:\/\/adamkiss.com\/"
+    "homepage": "https://adamkiss.com/"
 }

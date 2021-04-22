@@ -6,3 +6,6 @@ site/assets/dist
 site/assets/dev
 data/assets.js
 __build__
+
+# Local Netlify folder
+.netlify
