@@ -9,11 +9,11 @@
   {% block meta %}{% endblock %}
 
   <title>{% block title -%}
-    {{ item.title | default(title) }} - {{ site.meta.title }}
+    {{ item.title | default(title) }} {{ site.meta.title }}
   {%- endblock %}</title>
 
   {% block head %}
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="/assets/{{ assets('main.css') }}">
   {% endblock %}
 </head>

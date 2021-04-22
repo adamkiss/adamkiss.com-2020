@@ -1,8 +1,7 @@
 const site = {
 	meta: {
-		title: 'adamkiss.com',
-		description: 'adamkiss.com is a website.',
-		robots: 'noindex,nofollow'
+		title: 'Adam Kiss',
+		description: 'Design for developers. Development for designers. Brand & Marketing for Small Businesses.'
 	},
 	runtime: {
 		isProduction: () => process.env.NODE_ENV === 'production',

@@ -2,8 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@import "css/container";
-
 html, body {
 	font-size: 16px;
 
@@ -12,4 +10,17 @@ html, body {
 }
 body {
 	scroll-behavior: smooth
+}
+
+@layer base {
+  @font-face {
+    font-family: HappyTimes;
+    font-weight: 700;
+    src: url(/assets/fonts/happy-times-NG_bold_master_web.woff2) format("woff2");
+	font-display: swap;
+  }
+}
+
+em {
+	@apply not-italic font-bold font-happy;
 }
