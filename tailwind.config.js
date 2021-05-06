@@ -17,7 +17,8 @@ module.exports = {
 		},
 		fontFamily: {
 			'sans': [...defaultConfig.theme.fontFamily.sans],
-			'happy': ['HappyTimes', ...defaultConfig.theme.fontFamily.sans]
+			'serif': ['Cambria', "Times New Roman", 'Times', 'serif'],
+			// 'happy': ['HappyTimes', ...defaultConfig.theme.fontFamily.sans]
 		}
 	},
 	variants: {},

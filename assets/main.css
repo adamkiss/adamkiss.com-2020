@@ -12,15 +12,15 @@ body {
 	scroll-behavior: smooth
 }
 
-@layer base {
+/* @layer base {
   @font-face {
     font-family: HappyTimes;
     font-weight: 700;
     src: url(/assets/fonts/happy-times-NG_bold_master_web.woff2) format("woff2");
 	font-display: swap;
   }
-}
+} */
 
 em {
-	@apply not-italic font-bold font-happy;
+	@apply font-serif text-[1.1em];
 }
