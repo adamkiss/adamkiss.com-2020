@@ -23,7 +23,9 @@
 
   {% include "partials/tailwind-size-debug.njk" %}    
   {% block bodyEnd -%}
-    <script data-goatcounter="https://adam.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    {% if site.runtime.isProduction() %}
+      <script data-goatcounter="https://adam.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    {% endif %}
   {%- endblock %}
 </body>
 </html>
