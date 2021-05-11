@@ -6,18 +6,33 @@ repository: adamkiss/adamkiss.com
 {% extends "layout.njk" %}
 
 {% block content %}
-  <div class="
-    overflow-hidden absolute inset-0 flex flex-col justify-center items-start px-[10vw]
-    bg-almost-white text-almost-black dark:bg-almost-black dark:text-almost-white
-    antialiased leading-tight font-bold text-2xl xs:text-4xl sm:text-6xl xl:text-7xl
-  ">
-    <h1 class="mt-6"><em>Design</em> for developers. <em>Development</em> for designers. <em>Brand & Marketing</em> for Small Businesses.</h1>
-    <p class="mt-12 flex items-center">
-      <span class="relative flex w-2 h-2 md:w-6 md:h-6 mt-1 mr-2 md:mt-3">
-        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-ffs-2021 opacity-75"></span>
-        <span class="relative inline-flex rounded-full h-2 w-2 md:h-6 md:w-6 bg-ffs-2021"></span>
-      </span>
-      <a class="underline text-ffs-2021 transition hover:animate-pulse" href="mailto:iam@adamkiss.com?subject=I%20need%20your%20superpower:%20Design%20and%20development%20chops"><em>iam@</em><span class="text-almost-black dark:text-almost-white">adamkiss</span><em>.com</em></a>
-    </p>
+  <div class="py-24">
+  
+    ✍ Read
+    🐦 Tweet
+    💌 Email
+
+    <h2 class="text-5xl font-serif">Now</h2>
+    <p class="text-2xl leading-9">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam a cupiditate sint dolor aperiam, omnis temporibus sapiente inventore ex voluptatum, quasi vitae impedit dolores rerum pariatur numquam sequi adipisci ipsam.</p>
+
+    <h2 class="mt-12 text-5xl font-serif">Work Experience</h2>
+    <ul class="mt-4 text-2xl leading-9">
+      {% for job in work %}
+        <li class="flex">
+          <div class="flex-grow-0 text-gray-400">{{ job.year }} </div>
+          <div>
+            <div class="col-span-7">
+              {%- if job.url -%}
+                <a href="{{ job.url }}" target="_blank" class="inline-flex items-center mr-2"><strong class="underline">{{ job.name }}</strong><span class="text-2xs ml-1 px-1 rounded bg-gray-400 text-black uppercase">View</span></a>
+              {%- else -%}
+                <strong>{{ job.name }}</strong>
+              {%- endif -%}
+            </div>
+            <div class="col-start-2 col-end-8 font-serif text-gray-400">{{ job.work }}, for <span class="text-almost-white">{{ job.client }}</span></div>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  
   </div>
 {% endblock %}

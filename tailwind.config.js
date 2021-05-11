@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors')
 const defaultConfig = require('tailwindcss/defaultConfig')
 
 module.exports = {
@@ -13,13 +14,21 @@ module.exports = {
 				'white': "#dedede",
 				'black': "#202122"
 			},
-			'ffs-2021': "#ff2021"
+			'ffs-2021': "#ff2021",
+			white: colors.white,
+			black: colors.black,
+			gray: colors.trueGray,
 		},
 		fontFamily: {
 			'sans': [...defaultConfig.theme.fontFamily.sans],
 			'serif': ['Cambria', "Times New Roman", 'Times', 'serif'],
 			// 'happy': ['HappyTimes', ...defaultConfig.theme.fontFamily.sans]
-		}
+		},
+		extend: {
+			fontSize: {
+				'2xs': ['.6rem', '.8rem']
+			}
+		},
 	},
 	variants: {},
 	plugins: [],
