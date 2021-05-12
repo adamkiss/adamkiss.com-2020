@@ -1,5 +1,5 @@
 ---
-title: I make things happen.
+title: I make things.
 ---
 
 {% extends "layout.njk" %}
@@ -15,34 +15,22 @@ title: I make things happen.
     </div>
   </div>
   <div class="max-w-4xl 2xl:max-w-6xl mx-auto px-8 py-24 2xl:py-32 relative z-10">
-  
-    <div class="block md:hidden text-5xl font-bold">
-      <div aria-label="Adam Kiss" class="logo text-gray-800 dark:text-gray-200"><span
-        aria-hidden class="pointer-events-none">A</span><span
-        aria-hidden class="pointer-events-none">d</span><span
-        aria-hidden class="pointer-events-none">a</span><span
-        aria-hidden class="pointer-events-none">m</span><span
-        aria-hidden class="pointer-events-none"> </span><span
-        aria-hidden class="pointer-events-none">K</span><span
-        aria-hidden class="pointer-events-none">i</span><span
-        aria-hidden class="pointer-events-none">s</span><span
-        aria-hidden class="pointer-events-none">s</span>
-      </div>
-    </div>
+    <h1 class="block md:hidden text-5xl font-bold">Adam Kiss</h1>
 
     <div class="grid gap-16 lg:grid-cols-2">
-      <div class="lg:col-span-2 text-xl xs:text-3xl md:text-4xl 2xl:text-6xl 2xl:font-thin 2xl:pb-16">
-        <h2 class="mt-12 text-[1.1em] font-serif">I make things happen.</h2>
-        <ul class=" leading-12 list-ndash list-outside pl-4 -ml-4">
-          <li>Design for developers.<br></li>
-          <li>Development for designers.<br></li>
-          <li>Brand & marketing for small businesses.</li>
+      <div class="lg:col-span-2 text-xl xs:text-2xl sm:text-3xl md:text-4xl 2xl:text-6xl 2xl:font-thin">
+        <h2 class="mt-12 text-[1.2em] font-serif tracking-tight">I make things</h2>
+        <ul class="leading-12 list-ndash list-outside pl-4 -ml-1 xs:ml-2">
+          <li>nice & friendly for developers,<br></li>
+          <li>live & breathe for designers,<br></li>
+          <li>work for small businesses.</li>
         </ul>
+        <p class="mt-4 text-[1.1em] font-serif 2xl:text-4xl 2xl:font-bold tracking-tight">Design, development and everything in between.</p>
       </div>  
 
       <div class="sm:max-w-md sm:ml-auto lg:max-w-none ml:ml-none">
-        <h2 class="mt-16 text-5xl font-serif">Now</h2>
-        <ul class="text-xl leading-12 list-ndash list-outside pl-4 -ml-4">
+        <h2 class="mt-8 lg:mt-16 text-5xl font-serif tracking-tight">Now</h2>
+        <ul class="mt-4 text-xl leading-12 list-ndash list-outside pl-4 -ml-4">
           <li>Redesigning and consolidating the collateral of a client and setting a process to keep the quality over time in four countries</li>
           <li>Exploring whether CMS can be as delightful as a minimal text editor, while keeping the owner in full control of their data</li>
           <li>What's the least you need to do to stay on track of the business? Exploration and development</li>
@@ -51,30 +39,30 @@ title: I make things happen.
       </div>
 
       <div class="sm:max-w-md lg:max-w-none">
-        <h2 class="mt-16 text-5xl font-serif">Tools of the trade</h2>
-        <ul class="text-xl leading-12 list-ndash list-outside pl-4 -ml-4">
+        <h2 class="mt-8 lg:mt-16 text-5xl font-serif tracking-tight">Tools of the trade</h2>
+        <ul class="mt-4 text-xl leading-12 list-ndash list-outside pl-4 -ml-4">
+          <li>Empathy for users and clients</li>
           <li>All Adobe Design & Affinity products, Figma</li>
-          <li>Small to mid-scale CSS, currently of the "utility" variety</li>
-          <li>HTML and appropriate webtech: Eleventy where possible, Kirby where preferable, Laravel where needed</li>
-          <li>Some experience with sound, music & motion</li>
+          <li>HTML and appropriate webtech: <a href="https://11ty.dev" class="underline" rel="external">Eleventy</a> where possible, <a href="https://getkirby.com"  class="underline" rel="external">Kirby</a> where preferable, <a href="https://laravel.com/" class="underline" rel="external">Laravel</a> where needed</li>
+          <li>Small to mid-scale <abbr title="Cascading Stylesheets">CSS</abbr>, currently of the "utility" variety, and frameworkless <abbr title="Javascript">JS</abbr> if necessary</li>
+          <li>Some experience with creative direction, sound, music & motion</li>
         </ul>
       </div>
-
     </div>
 
-    <h2 class="mt-16 text-5xl font-serif">Work Experience</h2>
-    <ul class="mt-2 text-xl leading-9">
+    <h2 class="mt-16 text-5xl font-serif tracking-tight">Work Experience</h2>
+    <ul class="mt-4 text-xl leading-9">
       {% for job in work %}
         {{ u.yearHeader(job.year, '<li class="mt-4 -ml-4 md:hidden text-almost-black dark:text-almost-white">YYYY</li>') | safe }}
         <li class="md:flex mt-4 lg:mt-0">
           <div class="hidden md:block flex-grow-0 text-gray-600 dark:text-gray-400 tabular-nums">{{ job.year }} </div>
           <div>
             {%- if job.url -%}
-              <a rel="external" href="{{ job.url }}" target="_blank" class="inline-flex items-center mr-2"><strong class="underline">{{ job.name }}</strong><span class="text-2xs mt-1 ml-1 px-1 rounded bg-gray-400 text-black uppercase">View</span></a>
+              <a rel="external" href="{{ job.url }}" target="_blank" class="inline-flex items-center mr-2"><strong class="underline">{{ job.name }}</strong><span class="text-2xs mt-1 ml-1 px-1 rounded bg-gray-600 text-white dark:bg-gray-400 dark:text-black uppercase">View</span></a>
             {%- else -%}
               <strong>{{ job.name }}</strong>
             {%- endif -%}
-            <span class="block lg:inline-block font-serif text-[1.1em] text-gray-600 dark:text-gray-400">{{ job.work }}, {%
+            <span class="block lg:inline-block font-serif text-[1.1em] text-gray-600 dark:text-gray-400"> {{ job.work }}, {%
               if job.partner -%}
                 with <span class="text-almost-black dark:text-almost-white">{{ job.client | nbsp }}
               {%- else -%}
@@ -84,6 +72,8 @@ title: I make things happen.
           </div>
         </li>
       {% endfor %}
+      <li class="mt-4 -ml-4 md:mt-0 md:ml-0 text-almost-black dark:text-almost-white md:text-gray-600 md:dark:text-gray-400">2007—2021</li>
+      <li>More work coming soon</li>
     </ul>
 
     <h2 class="mt-32 text-xl font-bold">Adam Kiss</h2>
