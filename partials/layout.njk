@@ -17,13 +17,15 @@
   <link rel="stylesheet" href="/assets/{{ assets('main.css') }}">
   {% endblock %}
 </head>
-<body>
+<body class="antialiased dark:bg-almost-black dark:text-almost-white bg-almost-white text-almost-black">
   
   {% block content %}{% endblock %}
 
   {% include "partials/tailwind-size-debug.njk" %}    
   {% block bodyEnd -%}
-    <script data-goatcounter="https://adam.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    {% if site.runtime.isProduction() %}
+      <script data-goatcounter="https://adam.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+    {% endif %}
   {%- endblock %}
 </body>
 </html>
