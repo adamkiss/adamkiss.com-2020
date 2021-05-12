@@ -5,7 +5,7 @@ title: I make things.
 {% extends "layout.njk" %}
 
 {% block content %}
-  <div class="fixed w-full z-20 backdrop-filter backdrop-blur ">
+  <div class="fixed w-full z-20 backdrop-filter backdrop-blur-sm bg-gradient-to-b from-almost-white dark:from-almost-black">
     <div class="max-w-4xl 2xl:max-w-6xl mx-auto flex space-x-4 justify-between items-center px-8 py-2 sm:py-4">
       <a href="#" class="flex items-center">{% include "dot.njk" %}<span class="hidden sm:block font-bold">Adam Kiss</span></a>
       <span class="flex-grow"></span>
@@ -31,7 +31,7 @@ title: I make things.
 
       <div class="sm:max-w-md sm:ml-auto lg:max-w-none ml:ml-none">
         <h2 class="mt-8 lg:mt-16 text-4xl 2xl:text-6xl font-serif tracking-tight">Now</h2>
-        <ul class="mt-4 text-xl leading-12 list-ndash list-outside pl-4 -ml-4">
+        <ul class="mt-4 text-xl leading-12 list-red-dot list-outside pl-4 -ml-4">
           <li>Redesigning and consolidating the collateral of a client and setting a process to keep the quality over time in four countries</li>
           <li>Exploring whether CMS can be as delightful as a minimal text editor, while keeping the owner in full control of their data</li>
           <li>What's the least you need to do to stay on track of the business? Exploration and development</li>
@@ -41,7 +41,7 @@ title: I make things.
 
       <div class="sm:max-w-md lg:max-w-none">
         <h2 class="mt-8 lg:mt-16 text-4xl 2xl:text-6xl font-serif tracking-tight">Tools of the trade</h2>
-        <ul class="mt-4 text-xl leading-12 list-ndash list-outside pl-4 -ml-4">
+        <ul class="mt-4 text-xl leading-12 list-red-dot list-outside pl-4 -ml-4">
           <li>Empathy for users and clients</li>
           <li>All Adobe Design & Affinity products, Figma</li>
           <li>HTML and appropriate webtech: <a href="https://11ty.dev" class="underline" rel="external">Eleventy</a> where possible, <a href="https://getkirby.com"  class="underline" rel="external">Kirby</a> where preferable, <a href="https://laravel.com/" class="underline" rel="external">Laravel</a> where needed</li>
@@ -59,11 +59,11 @@ title: I make things.
           <div class="hidden md:block flex-grow-0 text-gray-600 dark:text-gray-400 tabular-nums">{{ job.year }} </div>
           <div>
             {%- if job.url -%}
-              <a rel="external" href="{{ job.url }}" target="_blank" class="inline-flex items-center mr-2"><strong class="underline">{{ job.name }}</strong><span class="text-2xs mt-1 ml-1 px-1 rounded bg-gray-600 text-white dark:bg-gray-400 dark:text-black uppercase">View</span></a>
+              <a rel="external" href="{{ job.url }}" target="_blank" class="inline-flex items-center mr-2"><strong class="underline">{{ job.name }}</strong><span class="text-2xs mt-1 ml-1 px-1 rounded bg-gray-600 text-white dark:bg-gray-500 dark:text-black uppercase">View</span></a>
             {%- else -%}
-              <strong>{{ job.name }}</strong>
+              <strong class="mr-2">{{ job.name }}</strong>
             {%- endif -%}
-            <span class="block lg:inline-block font-serif text-[1.1em] text-gray-600 dark:text-gray-400"> {{ job.work }}, {%
+            <span class="block lg:inline-block font-serif text-[1.1em] text-gray-600 dark:text-gray-400">{{ job.work }}, {%
               if job.partner -%}
                 with <span class="text-almost-black dark:text-almost-white">{{ job.client | nbsp }}
               {%- else -%}

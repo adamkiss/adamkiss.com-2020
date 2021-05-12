@@ -22,21 +22,36 @@ em {
 	@apply font-serif text-[1.1em];
 }
 
-.list-ndash {
-	list-style-type: none;
-	li:before {
-		content: "–"; /* en dash */
+@layer base {
+	.custom-bullet {
 		position: absolute;
-		margin-left: -.6em;
+		margin-left: -.67em;
 	}
 }
 
+.list-ndash {
+	@apply list-none;
+	& > li:before {
+		@apply custom-bullet;
+		content: "–"; /* en dash */
+	}
+}
 .list-ellipsis {
-	list-style-type: none;
-	li:before {
-		content: "…"; /* en dash */
-		position: absolute;
-		margin-left: -.6em;
+	@apply list-none;
+	& > li:before {
+		@apply custom-bullet;
+		content: "…";
+	}
+}
+.list-red-dot {
+	@apply list-none;
+	& > li {
+		@apply mt-4;
+	}
+	& > li:before {
+		@apply custom-bullet;
+		content: "•"; /* en dash */
+		@apply text-ffs-2021;
 	}
 }
 
