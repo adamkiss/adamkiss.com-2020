@@ -14,22 +14,23 @@ title: I make things.
       <a class="text-black dark:text-white underline rounded-lg p-1" href="mailto:iam@adamkiss.com">E-mail</a>
     </div>
   </div>
-  <div class="max-w-4xl 2xl:max-w-6xl mx-auto px-8 py-24 2xl:py-32 relative z-10">
+
+  <div class="max-w-4xl 2xl:max-w-6xl mx-auto px-8 py-24 2xl:py-32 relative z-10 leading-relaxed">
     <h1 class="block md:hidden text-5xl font-bold">Adam Kiss</h1>
 
     <div class="grid gap-16 lg:grid-cols-2">
       <div class="lg:col-span-2 text-xl xs:text-2xl sm:text-3xl md:text-4xl 2xl:text-6xl 2xl:font-thin">
-        <h2 class="mt-12 text-[1.2em] font-serif tracking-tight">I make things</h2>
-        <ul class="leading-12 list-ndash list-outside pl-4 -ml-1 xs:ml-2">
-          <li>nice & friendly for developers,<br></li>
-          <li>live & breathe for designers,<br></li>
+        <h2 class="mt-12 text-[1.1em] font-serif tracking-tight">I make things…</h2>
+        <ul class="leading-tight list-ellipsis list-outside pl-4 -ml-1 xs:ml-2">
+          <li>nice & friendly for developers.<br></li>
+          <li>live & breathe for designers.<br></li>
           <li>work for small businesses.</li>
         </ul>
-        <p class="mt-4 text-[1.1em] font-serif 2xl:text-4xl 2xl:font-bold tracking-tight">Design, development and everything in between.</p>
+        <p class="mt-2 text-[1.1em] font-serif 2xl:text-4xl 2xl:font-bold tracking-tight">Design, development and everything in between.</p>
       </div>  
 
       <div class="sm:max-w-md sm:ml-auto lg:max-w-none ml:ml-none">
-        <h2 class="mt-8 lg:mt-16 text-5xl font-serif tracking-tight">Now</h2>
+        <h2 class="mt-8 lg:mt-16 text-4xl 2xl:text-6xl font-serif tracking-tight">Now</h2>
         <ul class="mt-4 text-xl leading-12 list-ndash list-outside pl-4 -ml-4">
           <li>Redesigning and consolidating the collateral of a client and setting a process to keep the quality over time in four countries</li>
           <li>Exploring whether CMS can be as delightful as a minimal text editor, while keeping the owner in full control of their data</li>
@@ -39,7 +40,7 @@ title: I make things.
       </div>
 
       <div class="sm:max-w-md lg:max-w-none">
-        <h2 class="mt-8 lg:mt-16 text-5xl font-serif tracking-tight">Tools of the trade</h2>
+        <h2 class="mt-8 lg:mt-16 text-4xl 2xl:text-6xl font-serif tracking-tight">Tools of the trade</h2>
         <ul class="mt-4 text-xl leading-12 list-ndash list-outside pl-4 -ml-4">
           <li>Empathy for users and clients</li>
           <li>All Adobe Design & Affinity products, Figma</li>
@@ -50,7 +51,7 @@ title: I make things.
       </div>
     </div>
 
-    <h2 class="mt-16 text-5xl font-serif tracking-tight">Work Experience</h2>
+    <h2 class="mt-24 text-4xl 2xl:text-6xl font-serif tracking-tight">Work Experience</h2>
     <ul class="mt-4 text-xl leading-9">
       {% for job in work %}
         {{ u.yearHeader(job.year, '<li class="mt-4 -ml-4 md:hidden text-almost-black dark:text-almost-white">YYYY</li>') | safe }}
