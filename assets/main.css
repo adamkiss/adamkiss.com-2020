@@ -23,7 +23,12 @@ em {
 }
 
 .list-ndash {
-	list-style-type: '–  '
+	list-style-type: none;
+	li:before {
+		content: "–"; /* en dash */
+		position: absolute;
+		margin-left: -.6em;
+	}
 }
 
 .logo {

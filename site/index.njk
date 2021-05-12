@@ -1,13 +1,12 @@
 ---
-title: •
-repository: adamkiss/adamkiss.com
+title: I make things happen.
 ---
 
 {% extends "layout.njk" %}
 
 {% block content %}
   <div class="fixed w-full z-20 backdrop-filter backdrop-blur ">
-    <div class="max-w-4xl mx-auto flex space-x-4 justify-between items-center px-8 py-2 sm:py-4">
+    <div class="max-w-4xl 2xl:max-w-6xl mx-auto flex space-x-4 justify-between items-center px-8 py-2 sm:py-4">
       <a href="#" class="flex items-center">{% include "dot.njk" %}<span class="hidden sm:block font-bold">Adam Kiss</span></a>
       <span class="flex-grow"></span>
       <a class="text-black dark:text-white underline rounded-lg p-1" rel="external noopener noreferrer" href="https://instagram.com/adamkiss"><abbr title="Instagram" class="xs:hidden">IG</abbr><span class="hidden xs:block">Instagram</span></a>
@@ -15,7 +14,7 @@ repository: adamkiss/adamkiss.com
       <a class="text-black dark:text-white underline rounded-lg p-1" href="mailto:iam@adamkiss.com">E-mail</a>
     </div>
   </div>
-  <div class="max-w-4xl 2xl:max-w-6xl mx-auto px-8 py-24 relative z-10">
+  <div class="max-w-4xl 2xl:max-w-6xl mx-auto px-8 py-24 2xl:py-32 relative z-10">
   
     <div class="block md:hidden text-5xl font-bold">
       <div aria-label="Adam Kiss" class="logo text-gray-800 dark:text-gray-200"><span
@@ -32,8 +31,7 @@ repository: adamkiss/adamkiss.com
     </div>
 
     <div class="grid gap-16 lg:grid-cols-2">
-    
-      <div class="lg:col-span-2 text-xl md:text-4xl 2xl:text-6xl">
+      <div class="lg:col-span-2 text-xl xs:text-3xl md:text-4xl 2xl:text-6xl 2xl:font-thin 2xl:pb-16">
         <h2 class="mt-12 text-[1.1em] font-serif">I make things happen.</h2>
         <ul class=" leading-12 list-ndash list-outside pl-4 -ml-4">
           <li>Design for developers.<br></li>
@@ -52,7 +50,7 @@ repository: adamkiss/adamkiss.com
         </ul>
       </div>
 
-      <div class="sm:max-w-md nlg:max-w-none">
+      <div class="sm:max-w-md lg:max-w-none">
         <h2 class="mt-16 text-5xl font-serif">Tools of the trade</h2>
         <ul class="text-xl leading-12 list-ndash list-outside pl-4 -ml-4">
           <li>All Adobe Design & Affinity products, Figma</li>
@@ -88,8 +86,8 @@ repository: adamkiss/adamkiss.com
       {% endfor %}
     </ul>
 
-    <h2 class="mt-32 text-5xl font-serif">Adam Kiss</h2>
-    <p class="mt-2 text-xl leading-9">Based in Bratislava. Find me on <a class="underline" rel="external noopener noreferrer" href="https://instagram.com/adamkiss">Instagram</a>, <a class="underline" rel="external noopener noreferrer" href="https://twitter.com/adamkiss">Twitter</a> or <a class="underline" href="mailto:iam@adamkiss.com">E-mail</a>. Have a nice day.
+    <h2 class="mt-32 text-xl font-bold">Adam Kiss</h2>
+    <p class="text-xl leading-9">Based in Bratislava. Find me on <a class="underline" rel="external noopener noreferrer" href="https://instagram.com/adamkiss">Instagram</a>, <a class="underline" rel="external noopener noreferrer" href="https://twitter.com/adamkiss">Twitter</a> or <a class="underline" href="mailto:iam@adamkiss.com">E-mail</a>. Have a nice day.
     </p>
   </div>
 {% endblock %}
