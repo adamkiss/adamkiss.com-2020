@@ -49,9 +49,12 @@ em {
 		@apply mt-4;
 	}
 	& > li:before {
-		@apply custom-bullet;
+		@apply custom-bullet transition-colors duration-200 text-gray-600 dark:text-gray-400;
 		content: "•"; /* en dash */
-		@apply text-ffs-2021;
+
+	}
+	& > li:hover:before {
+		@apply text-ffs-2021
 	}
 }
 
