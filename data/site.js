@@ -1,7 +1,7 @@
 const site = {
 	meta: {
 		title: 'Adam Kiss',
-		description: 'I make things happen. Design for developers. Development for designers. Brand & Marketing for Small Businesses.'
+		description: 'I make things — Design for developers, Development for designers, Brand & Marketing for Small Businesses.'
 	},
 	runtime: {
 		isProduction: () => process.env.NODE_ENV === 'production',
