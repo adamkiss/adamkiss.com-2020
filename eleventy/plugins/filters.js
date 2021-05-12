@@ -7,4 +7,6 @@ module.exports = ec => {
 	ec.addFilter('or', function() {
 		return [...arguments].filter(a => a).shift()
 	})
+
+	ec.addFilter('nbsp', str => str.replace(' ', ' '))
 }
